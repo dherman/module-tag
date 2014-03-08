@@ -1,13 +1,16 @@
 # Web modules
 
-ECMAScript Edition 6 defines a standardized module system for
-JavaScript. This repo contains documents describing the constraints
-and designs of integration of JavaScript modules into the web.
-
-## The `module` tag
-
-See [module-tag](module-tag).
+This repo contains documents describing the constraints and designs of
+integration of ECMAScript modules into web standards.
 
 ## The browser default loader
 
+*tl;dr:* the behavior of `System` in the browser.
+
 See [browser-loader](browser-loader).
+
+## The `module` tag
+
+*tl;dr:* `<module>` is a better `<script>`.
+
+See [module-tag](module-tag).
