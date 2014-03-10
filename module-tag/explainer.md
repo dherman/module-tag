@@ -124,3 +124,25 @@ This is also convenient for writing small test cases, examples, etc.
 ## So, is this a packaging format?
 
 No. ...
+
+## What about XSS filters?
+
+The only safe way to do XSS filtering is whitelisting. For
+whitelisting filters, the addition of a new HTML tag poses no risks,
+because the tag is disallowed by default.
+
+Blacklisting filters are sadly prevalent -- sadly, because they're so
+easy to break. Spend any amount of time with a blacklist filter and
+you'll find ways to break it. In practice, blacklist filters that
+aren't being broken into aren't being broken into because no one has
+tried.
+
+In fact, the web platform adds new sources of executable script all
+the time in the form of attributes (such as media events like
+`onloadstart` or `onplaying`). In fact, a common way to defeat many
+blacklist filters is to hide the "javascript:" pseudo URL scheme with
+HTML entity encodings, which doesn't even require finding new
+attributes.
+
+In short, `module` is very unlikely to materially affect the relative
+security of any (already dangerously insecure) blacklist filters.
