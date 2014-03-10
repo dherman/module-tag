@@ -8,7 +8,7 @@ The `module` tag not only makes it convenient to import modules
 asynchronously, it also provides a better programming model. The
 slogan to live by is:
 
-**`<module>` is a better `<script>`**
+> **`<module>` is a better `<script>`**
 
 In other words, all code -- even top level or bootstrapping code --
 should live within modules. For convenience, top-level modules that
