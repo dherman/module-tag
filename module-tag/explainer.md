@@ -30,7 +30,22 @@ that is similar to `script` but improves it in a few key ways.
 
 ## `module` is a better `script`
 
-...
+Here are a few ways in which the `module` tag makes for a better
+programming model:
+
+* **Everything everywhere is in a module.** There's no need to write
+    global code ever, so the programming model is uniform.
+
+* **Top-level code is in a private scope.** Unlike `script`, top-level
+    variable bindings are local to the module defined in the current
+    `module` tag. In particular this means no more defensive IIFEs at
+    top level.
+
+* **Strict by default.** Unlike global code, modules are automatically
+    in strict mode, which cleans up several warts in JavaScript (like
+    `with`). It also fixes some interoperability nightmares of
+    non-strict code, in particular the semantics of block-local
+    function declarations.
 
 
 ## The "mixed model" of app data
