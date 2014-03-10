@@ -93,6 +93,11 @@ for popular idioms.
 
 ## Named modules
 
+Bootstrapping code sometimes needs to be able to ensure that its core
+functionality will be immediately available without loading any
+external dependencies. For this reason, it's also possible to define
+named modules inline:
+
 ```
 <module name="adder">
 export default function(x, y) {
@@ -102,11 +107,11 @@ export default function(x, y) {
 
 <module>
 import add from "adder";
-console.log(add(1.1, 2.2)); // 3.3000000000000003 wtfieee754.com
+console.log(add(1.1, 2.2)); // 3.3ish
 </module>
 ```
 
-...
+This is also convenient for writing small test cases, examples, etc.
 
 ## So, is this a packaging format?
 
