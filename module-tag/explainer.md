@@ -6,10 +6,12 @@ asynchronous loading logic. On the HTML side, there has to be a way to
 kick off the asynchronous loading of an application's modules. This
 could be done programmatically:
 
-```javascript
+```html
+<script>
 System.import("myapp").then(function(app) {
   // ...
 });
+</script>
 ```
 
 But the `module` tag provides a way to eliminate the boilerplate at
