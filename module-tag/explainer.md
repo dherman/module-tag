@@ -91,6 +91,22 @@ the conveniences of `script` so programmers can comfortably move to an
 all-modules development model without loss of ergonomics, especially
 for popular idioms.
 
+## Named modules
+
+```
+<module name="adder">
+export default function(x, y) {
+  return x + y;
+}
+</module>
+
+<module>
+import add from "adder";
+console.log(add(1.1, 2.2)); // 3.3000000000000003 wtfieee754.com
+</module>
+
+...
+
 ## So, is this a packaging format?
 
 No. ...
