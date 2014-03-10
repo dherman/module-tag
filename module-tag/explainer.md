@@ -75,7 +75,6 @@ startup logic embedded in HTML with uncacheable data baked in:
     <!-- ... -->
   </body>
 </html>
-
 ```
 
 One reason this pattern is popular is that it's so convenient to code
@@ -107,7 +106,7 @@ functionality will be immediately available without loading any
 external dependencies. For this reason, it's also possible to define
 named modules inline:
 
-```
+```html
 <module name="adder">
 export default function(x, y) {
   return x + y;
