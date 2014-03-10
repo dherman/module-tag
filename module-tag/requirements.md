@@ -2,7 +2,15 @@
 
 ## Programming model
 
-* As convenient as `script`
+### No new boilerplate
+
+The programming model needs to be as lightweight as
+
+```html
+<script>
+</script>
+```
+
 * Asynchronous by default
 * Predictable execution order
   * IOW should have deterministic initialization order like `defer`
