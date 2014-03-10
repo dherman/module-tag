@@ -5,8 +5,8 @@ in order to avoid blocking rendering, HTML needs a way to import
 modules only in the context of asynchronously loaded code.
 
 The `module` tag not only makes it convenient to import modules
-asynchronously, it also provides a better programming model. The
-slogan to live by is:
+asynchronously, it also makes for a better overall programming model
+by moving *all* JS development into modules. The slogan to live by is:
 
 > **`<module>` is a better `<script>`**
 
