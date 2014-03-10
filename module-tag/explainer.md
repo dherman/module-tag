@@ -91,6 +91,15 @@ the conveniences of `script` so programmers can comfortably move to an
 all-modules development model without loss of ergonomics, especially
 for popular idioms.
 
+## External module scripts
+
+As a replacement for `script`, of course `module` also needs to allow
+loading module sources from external files:
+
+```html
+<module src="main.js"></module>
+```
+
 ## Named modules
 
 Bootstrapping code sometimes needs to be able to ensure that its core
