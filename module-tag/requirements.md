@@ -1,5 +1,10 @@
 # Requirements
 
+This document explains the requirements/design constraints for the
+`module` tag.
+
+
+
 ## Programming model
 
 ### No new boilerplate
@@ -11,6 +16,9 @@ The programming model needs to be as lightweight as
 // app code here...
 </script>
 ```
+
+Otherwise it does not provide an attractive enough alternative to
+`script`.
 
 ### Asynchronous
 
@@ -45,17 +53,29 @@ App bootstrapping code (the "main" logic) shouldn't require separate
 files.
 
 
+
 ## Backwards compatibility
 
-* Must not break decent XSS filters
+### Respect decent XSS filters
 
-## Polyfill
+The rollout should not create significant new attacks on reasonably
+robust XSS filters.
 
-* Must be possible to hide script contents in downrev browsers
-  * Style with `display:none`
-  * `<script type="application/x-javascript+module">`
+### Proper processing in downrev browsers
 
+The rollout should provide a mechanism for rolling out polyfills in
+downrev browsers. It should be possible to ensure script source is
+invisible and to process module contents as CDATA.
+
+
+
 ## HTML imports
 
-* HTML imports should be able to register modules
-* Resolving JS imports should not race on whether HTML imports have been loaded
+### Modules in HTML imports
+
+It should be possible for HTML import files to register modules.
+
+### No registry races
+
+Resolving module imports should not race on whether HTML imports have
+been loaded yet.
