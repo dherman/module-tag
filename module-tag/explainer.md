@@ -15,7 +15,7 @@ System.import("myapp").then(function(app) {
 But the `module` tag provides a way to eliminate the boilerplate at
 app top-level, too:
 
-```javascript
+```html
 <module>
 import app from "myapp";
 ...
