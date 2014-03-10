@@ -1,6 +1,6 @@
 # Requirements
 
-This document explains the requirements/design constraints for the
+This document explains the requirements and design constraints for the
 `module` tag.
 
 
