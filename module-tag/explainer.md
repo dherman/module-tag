@@ -1,5 +1,36 @@
 # The `module` tag explained
 
+ES6 modules make it possible to state module dependencies
+declaratively and fetch them asynchronously, without boilerplate
+asynchronous loading logic. On the HTML side, there has to be a way to
+kick off the asynchronous loading of an application's modules. This
+could be done programmatically:
+
+```javascript
+System.import("myapp").then(function(app) {
+  // ...
+});
+```
+
+But the `module` tag provides a way to eliminate the boilerplate at
+app top-level, too:
+
+```javascript
+<module>
+import app from "myapp";
+...
+</module>
+```
+
+In fact, the `module` tag provides an overall programming experience
+that is similar to `script` but improves it in a few key ways.
+
+
+## `module` is a better `script`
+
+...
+
+
 ## The "mixed model" of app data
 
 It's common for web apps to have uncached HTML source that loads
@@ -36,3 +67,13 @@ in templated frameworks like PHP or Rails:
 ```php
 app.preload(<%= escape_unicode(json) %>);
 ```
+
+Of course, it's *possible* to do the same thing with blocking `script`
+tags or XHR and async logic, but the goal of `module` is to subsume
+the conveniences of `script` so programmers can comfortably move to an
+all-modules development model without loss of ergonomics, especially
+for popular idioms.
+
+## So, is this a packaging format?
+
+No. ...
