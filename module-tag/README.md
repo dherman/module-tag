@@ -21,3 +21,6 @@ names. But they still have the benefits of modules:
 * they're implicitly strict, eliminating some of the most egregious
   misfeatures (e.g., `with`) and interoperability hazards (e.g.,
   block-local function declarations) of legacy JS
+
+To understand the design and how you might build apps with the
+`module` tag, see the [explainer document](explainer.md).
