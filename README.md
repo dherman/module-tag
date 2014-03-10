@@ -6,4 +6,4 @@ documents explaining the constraints and designs of those touch
 points, namely:
 
 * **[browser default loader](browser-loader):** the behavior of `System` in the browser.
-* **[the module tag](module-tag):** the `<module>` tag is a better `<script>` tag.
+* **[the module tag](module-tag):** a better `<script>` tag for a better programming model.
