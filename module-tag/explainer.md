@@ -33,6 +33,9 @@ that is similar to `script` but improves it in a few key ways.
 Here are a few ways in which the `module` tag makes for a better
 programming model:
 
+* **Declarative imports are legal.** Top-level code can import from
+    external modules.
+
 * **Everything everywhere is in a module.** There's no need to write
     global code ever, so the programming model is uniform.
 
@@ -124,6 +127,7 @@ This is also convenient for writing small test cases, examples, etc.
 ## So, is this a packaging format?
 
 No. ...
+
 
 ## What about XSS filters?
 
