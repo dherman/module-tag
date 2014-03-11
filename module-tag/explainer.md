@@ -36,6 +36,11 @@ programming model:
 * **Declarative imports.** Top-level code can import from external
     modules.
 
+* **Async.** Unlike `script`, which makes you opt into async loading
+    (and at least currently doesn't allow inline source with `async`
+    or `defer`), the `module` tag always loads and executes
+    asynchronously.
+
 * **Everything everywhere is in a module.** There's no need to write
     global code ever, so the programming model is uniform.
 
