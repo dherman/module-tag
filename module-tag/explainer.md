@@ -1,10 +1,10 @@
 # The `module` tag explained
 
-ES6 modules make it possible to state module dependencies
+ES6 modules make it possible to express module dependencies
 declaratively and fetch them asynchronously, without boilerplate
-asynchronous loading logic. On the HTML side, there has to be a way to
-kick off the asynchronous loading of an application's modules. This
-could be done programmatically:
+asynchronous loading logic. Now, there must be a way in HTML to kick
+off the asynchronous loading of an application's modules. This could
+be done programmatically:
 
 ```html
 <script>
@@ -56,7 +56,7 @@ programming model:
 It's common for web apps to have uncached HTML source that loads
 uncacheable data by mixing it inline with source code. This is just as
 convenient with the `module` tag, but it's now also interoperable with
-(possible highly cacheable) external source files. For example, an app
+(possibly highly cacheable) external modules. For example, an app
 might have most of its application logic in cacheable modules, but its
 startup logic embedded in HTML with uncacheable data baked in:
 
