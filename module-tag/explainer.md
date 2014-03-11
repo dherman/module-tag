@@ -134,6 +134,16 @@ requirements). The driving purpose of `module` is top-level or
 bootstrapping code.
 
 
+## What about concatenation?
+
+Concatenation is a packaging solution, but a limited one. See above.
+
+That said, the [ES6 Loader
+API](https://gist.github.com/dherman/7568080) does allow custom code
+packaging formats and concatenation. The better solution is enabling
+packaging via URL's and (extensible) bundling formats.
+
+
 ## What about XSS filters?
 
 The only safe way to do XSS filtering is whitelisting. For
