@@ -141,7 +141,7 @@ bootstrapping code.
 
 ## What about concatenation?
 
-Concatenation is a packaging solution, but a limited one. See above.
+Concatenation is a packaging solution, but a limited one (see above).
 
 That said, the [ES6 Loader
 API](https://gist.github.com/dherman/7568080) does allow custom code
