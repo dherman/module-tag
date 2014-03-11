@@ -126,11 +126,11 @@ This is also convenient for writing small test cases, examples, etc.
 
 ## So, is this a packaging format?
 
-No. The TAG is currently working on a more general [asset
-packaging](https://github.com/w3ctag/packaging-on-the-web) solution
-(note that there's more work to do there -- I don't think the TAG
-documents are currently addressing all the important requirements) as
-a high priority. The driving purpose of `<module>` is top-level or
+No. The TAG is currently working on a more general and high priority
+[asset packaging](https://github.com/w3ctag/packaging-on-the-web)
+solution (note that there's more work to do there -- I don't think the
+TAG documents are currently addressing all the important
+requirements). The driving purpose of `module` is top-level or
 bootstrapping code.
 
 
