@@ -160,7 +160,7 @@ the better solution is enabling bundling of arbitrary assets (not just
 code) via URL's and extensible package formats.
 
 
-## Is consistency across environments possible with browser-only packaging?
+## What about sharing packages between client and server?
 
 ES6 modules separate the concept of module naming from deployment
 format through the [Loader
