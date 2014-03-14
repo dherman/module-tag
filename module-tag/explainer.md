@@ -217,5 +217,5 @@ browsers is an equivalent `script` MIME type:
 
 This is fully backwards-compatible and enables polyfilling in legacy
 browsers. The semantics is identical to `module`. But in the longer
-run, once enough browsers support `module`, it provides the more
-attractive development model and will be suitable for production apps.
+run, once enough browsers support `module`, that will become suitable
+for production apps and will be the more ergonomic syntax.
