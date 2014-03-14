@@ -209,7 +209,7 @@ its source, and legal in the `head` of an HTML document. For all these
 reasons, the stopgap solution that can be used compatibly with legacy
 browsers is an equivalent `script` MIME type:
 
-```javascript
+```html
 <script type="application/javascript+module">
 ...
 </script>
