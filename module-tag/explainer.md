@@ -129,6 +129,15 @@ console.log(add(1.1, 2.2)); // 3.3ish
 
 This is also convenient for writing small test cases, examples, etc.
 
+
+## Wait, you expect devs to embed all their modules in HTML?
+
+No. The main use case for `module` is for top-level app code. Named
+`module` elements are not intended to be used for most of an app's
+modules, but rather for bootstrapping code. The primary development
+model is, as usual, to put JavaScript source in separate files.
+
+
 ## So, is this a packaging format?
 
 No. The TAG is currently working on a more general and high priority
@@ -143,10 +152,30 @@ bootstrapping code.
 
 Concatenation is a packaging solution, but a limited one (see above).
 
-That said, the [ES6 Loader
-API](https://gist.github.com/dherman/7568080) does allow custom code
-packaging formats and concatenation. The better solution is enabling
-packaging via URL's and (extensible) bundling formats.
+That said, the
+[ServiceWorker](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
+and [ES6 Loader](https://gist.github.com/dherman/7568080) API's will
+allow custom code packaging formats and concatenation. But ultimately
+the better solution is enabling bundling of arbitrary assets (not just
+code) via URL's and extensible package formats.
+
+
+## Is consistency across environments possible with browser-only packaging?
+
+ES6 modules separate the concept of module naming from deployment
+format through the [Loader
+API](https://gist.github.com/dherman/7568080). For example, you can
+write
+```javascript
+import _ from "underscore";
+```
+in your module source, and configure each host environment differently
+to find `"underscore"` in the appropriate location, without changing
+the source code.
+
+In fact, a packaging format can be reused in multiple host
+environments, since loaders can easily be configured (or even designed
+to work out of the box) with the browser packaging format.
 
 
 ## What about XSS filters?
