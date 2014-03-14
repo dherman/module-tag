@@ -199,3 +199,23 @@ attributes.
 
 In short, `module` is very unlikely to materially affect the relative
 security of any (already dangerously insecure) blacklist filters.
+
+
+## How do we get there from here?
+
+The `module` tag will need to be implicitly CDATA (so code like `x <
+5` doesn't cause parsing issues), automatically styled not to display
+its source, and legal in the `head` of an HTML document. For all these
+reasons, the stopgap solution that can be used compatibly with legacy
+browsers is an equivalent `script` MIME type:
+
+```javascript
+<script type="application/javascript+module">
+...
+</script>
+```
+
+This is fully backwards-compatible and enables polyfilling in legacy
+browsers. The semantics is identical to `module`. But in the longer
+run, once enough browsers support `module`, it provides the more
+attractive development model and will be suitable for production apps.
