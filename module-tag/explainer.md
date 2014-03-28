@@ -108,7 +108,7 @@ loading module sources from external files:
 ```
 
 
-## Shouldn't devs be putting their source code in separate JS source files?
+## Shouldn't JS modules live in separate source files?
 
 In general, yes. But `module` is simply a better `script`, and
 `script` continues to have plenty of usage, such as the "mixed model"
