@@ -107,38 +107,15 @@ loading module sources from external files:
 <module src="main.js"></module>
 ```
 
-## Named modules
 
-Bootstrapping code sometimes needs to be able to ensure that its core
-functionality will be immediately available without loading any
-external dependencies. For this reason, it's also possible to define
-named modules inline:
+## Shouldn't devs be putting their source code in separate JS source files?
 
-```html
-<module name="adder">
-export default function(x, y) {
-  return x + y;
-}
-</module>
-
-<module>
-import add from "adder";
-console.log(add(1.1, 2.2)); // 3.3ish
-</module>
-```
-
-This is also convenient for writing small test cases, examples, etc.
+In general, yes. But `module` is simply a better `script`, and
+`script` continues to have plenty of usage, such as the "mixed model"
+described above.
 
 
-## Wait, you expect devs to embed all their modules in HTML?
-
-No. The main use case for `module` is for top-level app code. Named
-`module` elements are not intended to be used for most of an app's
-modules, but rather for bootstrapping code. The primary development
-model is, as usual, to put JavaScript source in separate files.
-
-
-## So, is this a packaging format?
+## Is this intended to be used for packaging?
 
 No. The TAG is currently working on a more general and high priority
 [asset packaging](https://github.com/w3ctag/packaging-on-the-web)
@@ -160,7 +137,7 @@ the better solution is enabling bundling of arbitrary assets (not just
 code) via URL's and extensible package formats.
 
 
-## What about sharing packages between client and server?
+## If packages become a browser format, how can they be shared with the server?
 
 ES6 modules separate the concept of module naming from deployment
 format through the [Loader
